@@ -1,12 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro'
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<h1 class="text-white">
-		Hey, Soy GiojoDev <Badge>Disponible para trabajar</Badge></h1>
-		<h2>+8 años de experiencia. Desarrollador Web, Frontend y Backend, De Managua,Nicaragua. Creador de aplicaciones y soluciones únicas</h2>
-	</main>
+  <section class="w-full mx-auto lg:w-[740px] py-44">
+    <h1
+      class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
+    >
+      Hey, Soy GiojoDev <a href="https://www.linkedin.com/in/giojodev/" target="_blank" rel="noopener" class="flex justify-center items-center">
+		<Badge>Disponible para trabajar</Badge>
+		</a>
+        
+      </div>
+    </h1>
+    <h2 class="text-xl opacity-80">
+      +8 años de experiencia. Desarrollador Web, Frontend y Backend, De
+      Managua,Nicaragua. Creador de aplicaciones y soluciones únicas
+    </h2>
+  </section>
 </Layout>
-
