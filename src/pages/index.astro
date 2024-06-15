@@ -5,18 +5,31 @@ import Badge from "../components/Badge.astro";
 
 <Layout title="Welcome to Astro.">
   <section class="w-full mx-auto lg:w-[740px] py-44">
+    <img
+      class="rounded-full w-12 h-12 mb-4"
+      src="https://avatars.githubusercontent.com/u/80933087?v=4"
+      alt="giojo photo"
+    />
     <h1
       class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
     >
-      Hey, Soy GiojoDev <a href="https://www.linkedin.com/in/giojodev/" target="_blank" rel="noopener" class="flex justify-center items-center">
-		<Badge>Disponible para trabajar</Badge>
-		</a>
-        
-      </div>
+      Hey, Soy GioJoDev <a
+        href="https://www.linkedin.com/in/giojodev/"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-center items-center"
+      >
+        <Badge>Disponible para trabajar</Badge>
+      </a>
     </h1>
-    <h2 class="text-xl opacity-80">
-      +8 años de experiencia. Desarrollador Web, Frontend y Backend, De
-      Managua,Nicaragua. Creador de aplicaciones y soluciones únicas
-    </h2>
   </section>
+  <h2 class="text-2xl ">
+    <span>+10 años de experiencia.</span>
+    <span class="text-green-500/90">Desarrollador Web, Frontend y Backend,</span
+    >
+    <span class="text-blue-400/90 opacity-100"> De Managua, Nicaragua</span>.
+    <span class="opacity-70"
+      >Desarrollador de aplicaciones y soluciones únicas</span
+    >
+  </h2>
 </Layout>
