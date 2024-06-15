@@ -1,9 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from '../components/icons/Mail.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio de GioJoDev - Desarrollador y Programador Web con 10 años de experiencia">
   <section class="w-full mx-auto lg:w-[740px] py-44">
     <img
       class="rounded-full w-12 h-12 mb-4"
@@ -23,7 +27,7 @@ import Badge from "../components/Badge.astro";
       </a>
     </h1>
   </section>
-  <h2 class="text-2xl ">
+  <h2 class="text-2xl">
     <span>+10 años de experiencia.</span>
     <span class="text-green-500/90">Desarrollador Web, Frontend y Backend,</span
     >
@@ -31,5 +35,20 @@ import Badge from "../components/Badge.astro";
     <span class="opacity-70"
       >Desarrollador de aplicaciones y soluciones únicas</span
     >
+    <nav class="flex gap-x-2">
+      <SocialPill>
+        <LinkedinIcon class="w-6 h-6" href="https://www.linkedin.com/in/giojodev/"/>
+        Linkedin
+      </SocialPill>
+
+      <SocialPill>
+        <GithubIcon class="w-6 h-6" href="https://github.com/giojodev" />
+        Github
+      </SocialPill>
+      <SocialPill>
+        <MailIcon class="w-6 h-6" href="https://github.com/giojodev" />
+        giojodeveloper.gmail.com
+      </SocialPill>
+    </nav>
   </h2>
 </Layout>
