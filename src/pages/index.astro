@@ -5,12 +5,17 @@ import GithubIcon from "../components/icons/Github.astro";
 import LinkedinIcon from "../components/icons/Linkedin.astro";
 import SocialPill from "../components/SocialPill.astro";
 import MailIcon from '../components/icons/Mail.astro'
+import Experience from '../components/Experiencie.astro'
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from '../components/icons/Briefcase.astro'
 ---
 
-<Layout title="Portfolio de GioJoDev - Desarrollador y Programador Web con 10 años de experiencia">
-  <section class="w-full mx-auto lg:w-[740px] py-44">
+<Layout title="Portfolio de GioJoDev - Desarrollador y Programador Web con 10 años de experiencia"
+description="Contrata a GioJoDev"
+>
+  <SectionContainer   class="py-44 pb-20">
     <img
-      class="rounded-full w-12 h-12 mb-4"
+      class="rounded-full size-12 mb-4"
       src="https://avatars.githubusercontent.com/u/80933087?v=4"
       alt="giojo photo"
     />
@@ -26,29 +31,40 @@ import MailIcon from '../components/icons/Mail.astro'
         <Badge>Disponible para trabajar</Badge>
       </a>
     </h1>
-  </section>
-  <h2 class="text-2xl">
-    <span>+10 años de experiencia.</span>
-    <span class="text-green-500/90">Desarrollador Web, Frontend y Backend,</span
-    >
-    <span class="text-blue-400/90 opacity-100"> De Managua, Nicaragua</span>.
-    <span class="opacity-70"
-      >Desarrollador de aplicaciones y soluciones únicas</span
-    >
-    <nav class="flex gap-x-2">
-      <SocialPill>
-        <LinkedinIcon class="w-6 h-6" href="https://www.linkedin.com/in/giojodev/"/>
-        Linkedin
-      </SocialPill>
-
-      <SocialPill>
-        <GithubIcon class="w-6 h-6" href="https://github.com/giojodev" />
-        Github
-      </SocialPill>
-      <SocialPill>
-        <MailIcon class="w-6 h-6" href="https://github.com/giojodev" />
-        giojodeveloper.gmail.com
-      </SocialPill>
-    </nav>
-  </h2>
+  </SectionContainer>
+  <SectionContainer  class=" pb-20">
+    <h2 class="text-2xl">
+      <span>+10 años de experiencia.</span>
+      <span class="text-green-500/90">Desarrollador Web, Frontend y Backend,</span
+      >
+      <span class="text-blue-400/90 opacity-100"> De Managua, Nicaragua</span>.
+      <span class="opacity-70"
+        >Desarrollador de aplicaciones y soluciones únicas</span
+      >
+      <nav class="flex gap-x-2">
+        <SocialPill>
+          <LinkedinIcon class="size-6" href="https://www.linkedin.com/in/giojodev/"/>
+          Linkedin
+        </SocialPill>
+  
+        <SocialPill>
+          <GithubIcon class="size-6" href="https://github.com/giojodev" />
+          Github
+        </SocialPill>
+        <SocialPill>
+          <MailIcon class="size-6" href="https://github.com/giojodev" />
+          giojodeveloper.gmail.com
+        </SocialPill>
+      </nav>
+    </h2>
+  </SectionContainer>
+  <SectionContainer id="experiencia">
+    <div class="flex flex-row gap-x-3 mb-6 items-center">
+      <Briefcase class="size-8"/>
+      <h1 class="text-2xl font-semibold">
+        
+        Experiencia Laboral</h1>
+    </div>
+    <Experience />
+  </SectionContainer>
 </Layout>
