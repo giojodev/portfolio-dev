@@ -13,6 +13,7 @@ import Briefcase from '../components/icons/Briefcase.astro'
 <Layout title="Portfolio de GioJoDev - Desarrollador y Programador Web con 10 años de experiencia"
 description="Contrata a GioJoDev"
 >
+<main class="px-10">
   <SectionContainer   class="py-44 pb-20">
     <img
       class="rounded-full size-12 mb-4"
@@ -20,7 +21,7 @@ description="Contrata a GioJoDev"
       alt="giojo photo"
     />
     <h1
-      class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
+      class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10"
     >
       Hey, Soy GioJoDev <a
         href="https://www.linkedin.com/in/giojodev/"
@@ -33,7 +34,7 @@ description="Contrata a GioJoDev"
     </h1>
   </SectionContainer>
   <SectionContainer  class=" pb-20">
-    <h2 class="text-2xl">
+    <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
       <span>+10 años de experiencia.</span>
       <span class="text-green-500/90">Desarrollador Web, Frontend y Backend,</span
       >
@@ -41,18 +42,18 @@ description="Contrata a GioJoDev"
       <span class="opacity-70"
         >Desarrollador de aplicaciones y soluciones únicas</span
       >
-      <nav class="flex gap-x-2">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill>
-          <LinkedinIcon class="size-6" href="https://www.linkedin.com/in/giojodev/"/>
+          <LinkedinIcon class="size-4 md:size-6" href="https://www.linkedin.com/in/giojodev/"/>
           Linkedin
         </SocialPill>
   
         <SocialPill>
-          <GithubIcon class="size-6" href="https://github.com/giojodev" />
+          <GithubIcon class="size-4 md:size-6" href="https://github.com/giojodev" />
           Github
         </SocialPill>
         <SocialPill>
-          <MailIcon class="size-6" href="https://github.com/giojodev" />
+          <MailIcon class="size-4 md:size-6" href="https://github.com/giojodev" />
           giojodeveloper.gmail.com
         </SocialPill>
       </nav>
@@ -67,4 +68,5 @@ description="Contrata a GioJoDev"
     </div>
     <Experience />
   </SectionContainer>
+</main>
 </Layout>
