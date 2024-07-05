@@ -1,10 +1,70 @@
 ---
-import HtmlIcon from '../components/icons/HtmlIcon.astro'
+import HtmlIcon from "../components/icons/HtmlIcon.astro";
+import AzureIcon from "../components/icons/AzureIcon.astro";
+import CSSIcon from "../components/icons/CssIcon.astro";
+import JavascriptIcon from "../components/icons/JavascriptIcon.astro";
+import CSharp from "../components/icons/CSharpIcon.astro";
+import NetIcon from "../components/icons/NetIcon.astro";
+import ReactIcon from "../components/icons/ReactIcon.astro";
+import RestAPIICON from "../components/icons/RestAPIIcon.astro";
+import VBIcon from "../components/icons/VisualBasicIcon.astro";
+import SqlIcon from "../components/icons/SsqlIcon.astro";
+import TypeScriptIcon from "../components/icons/TypescriptIcon.astro";
 const TAGS = {
   HTML: {
+    name: "HTML5",
+    class: "bg-black text-white",
+    icon: HtmlIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-300 text-white",
+    icon: CSSIcon,
+  },
+  JS: {
+    name: "Javascript",
+    class: "bg-yellow-700 text-white",
+    icon: JavascriptIcon,
+  },
+  NET: {
+    name: ".Net",
+    class: "bg-purple-800 text-white",
+    icon: NetIcon,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-purple-800 text-white",
+    icon: CSharp,
+  },
+  VB: {
+    name: "VB.Net",
+    class: "bg-purple-800 text-white",
+    icon: VBIcon,
+  },
+  SQL: {
     name: "html5",
     class: "bg-black text-white",
-    icon: HtmlIcon
+    icon: SqlIcon,
+  },
+  TypScript: {
+    name: "html5",
+    class: "bg-black text-white",
+    icon: TypeScriptIcon,
+  },
+  Azure: {
+    name: "html5",
+    class: "bg-black text-white",
+    icon: AzureIcon,
+  },
+  React: {
+    name: "html5",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+  API: {
+    name: "html5",
+    class: "bg-black text-white",
+    icon: RestAPIICON,
   }
 };
 const PROJECTS = [
@@ -15,7 +75,15 @@ const PROJECTS = [
     link: "#",
     github: "#",
     image: "/public/projects/fe.webp",
-    tags: [TAGS.HTML, "CSS", "JavaScript", "VB.Net", "SqlServer", "RestAPI"],
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JS,
+      TAGS.VB,
+      TAGS.SQL,
+      TAGS.API,
+      TAGS.Azure
+    ],
   },
   {
     title: "Suministros",
@@ -63,7 +131,10 @@ const PROJECTS = [
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul>
         {tags.map((tag) => (
-          <li>{tag.name}</li>
+          <span>
+            <tag.icon />
+            {tag.name}
+          </span>
         ))}
       </ul>
       <img
