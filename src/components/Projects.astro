@@ -1,26 +1,76 @@
 ---
+import HtmlIcon from '../components/icons/HtmlIcon.astro'
+const TAGS = {
+  HTML: {
+    name: "html5",
+    class: "bg-black text-white",
+    icon: HtmlIcon
+  }
+};
 const PROJECTS = [
-    {
-        title:"",
-        description:"Lorem",
-        link:"#",
-        github:"#",
-        image:"https://via.placeholder.com/300x200",
-        tags: ['HTML','CSS','JavaScript']
-    }
-]
+  {
+    title: "Flujo Emision",
+    description:
+      "Creacion de tramites para la gestion y revision del ciclo de vida de un proceso para emitir polizas.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/fe.webp",
+    tags: [TAGS.HTML, "CSS", "JavaScript", "VB.Net", "SqlServer", "RestAPI"],
+  },
+  {
+    title: "Suministros",
+    description:
+      "Plataforma para realizar gestion de insumos en oficinas y sucursales necesarios para manejar las operaciones del dia a dia.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/sum.webp",
+    tags: ["React", "CSS", "JavaScript", ".NetCore", "RestAPI", "C#"],
+  },
+  {
+    title: "FlujoCoreApi",
+    description:
+      "Plataforma de servicios RestAPI creados para las interactuar con las bases de datos de otras plataformas como flujo emision, cotizacion y reclamos, asi como aplicaciones de terceros (Salesforce,Sisnet).",
+    link: "#",
+    github: "#",
+    image: "/public/projects/flujocoreapi.webp",
+    tags: ["NetCore", "C#", "RestAPI"],
+  },
+  {
+    title: "Flujo Reclamos",
+    description:
+      "Plataforma que registra el ciclo de vida de un tramite para la gestion de los reclamos recibidos por una poliza.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/fr.webp",
+    tags: ["HTML", "CSS", "JavaScript", "VB.Net", "SqlServer", "RestAPI"],
+  },
+  {
+    title: "Flujo Admin",
+    description:
+      "Plataforma para la gestion de usuarios y permisos segun perfil asociado en las plataformas de flujo.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/flujoadmin.webp",
+    tags: ["HTML", "CSS", "JavaScript", "VB.Net"],
+  },
+];
 ---
+
 {
-    PROJECTS.map(({title,description,tags,image})=>(
-        <article>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <ul>
-                {tags.map(tag=>(
-                    <li>{tag}</li>
-                ))}
-            </ul>
-            <img src={image} alt={`Captura de pantala del proyecto ${image}`}>
-        </article>
-    ))
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-3xl font-semibold text-teal-200/80">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag.name}</li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantala del proyecto ${image}`}
+      />
+    </article>
+  ))
 }
