@@ -1,0 +1,198 @@
+---
+import LinkButton from "./LinkButton.astro";
+import HtmlIcon from "../components/icons/HtmlIcon.astro";
+import AzureIcon from "../components/icons/AzureIcon.astro";
+import CSSIcon from "../components/icons/CssIcon.astro";
+import JavascriptIcon from "../components/icons/JavascriptIcon.astro";
+import CSharpIcon from "../components/icons/CSharpIcon.astro";
+import NetIcon from "../components/icons/NetIcon.astro";
+import ReactIcon from "../components/icons/ReactIcon.astro";
+import RestAPIIcon from "../components/icons/RestAPIIcon.astro";
+import VBIcon from "../components/icons/VisualBasicIcon.astro";
+import SqlIcon from "../components/icons/SsqlIcon.astro";
+import TypeScriptIcon from "../components/icons/TypescriptIcon.astro";
+import PhpIcon from "../components/icons/PhpIcon.astro";
+import LaravelIcon from "../components/icons/Laravel.astro";
+import GitHub from "../components/icons/Github.astro";
+import Link from "../components/LinkInline.astro";
+const TAGS = {
+  HTML: {
+    name: "HTML5",
+    class: "bg-gray-600/50 text-white",
+    icon: HtmlIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-sky-800/50 text-white",
+    icon: CSSIcon,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-yellow-700 text-white",
+    icon: JavascriptIcon,
+  },
+  NET: {
+    name: ".Net",
+    class: "bg-blue-800/50 text-white",
+    icon: NetIcon,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-purple-800/50 text-white",
+    icon: CSharpIcon,
+  },
+  VB: {
+    name: "VB.Net",
+    class: "bg-blue-700/50 text-white",
+    icon: VBIcon,
+  },
+  SQL: {
+    name: "SQL",
+    class: "bg-red-900/50 text-white",
+    icon: SqlIcon,
+  },
+  TypeScript: {
+    name: "TypeScript",
+    class: "bg-blue-800/50 text-white",
+    icon: TypeScriptIcon,
+  },
+  Azure: {
+    name: "Azure",
+    class: "bg-sky-900/80 text-white",
+    icon: AzureIcon,
+  },
+  React: {
+    name: "React",
+    class: "bg-blue-900/50 text-white",
+    icon: ReactIcon,
+  },
+  API: {
+    name: "RestAPI",
+    class: "bg-rose-950 text-white",
+    icon: RestAPIIcon,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-blue-900/50 text-white",
+    icon: PhpIcon,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-rose-950/50 text-white",
+    icon: LaravelIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Flujo Emision",
+    description:
+      "Creacion de tramites para la gestion y revision del ciclo de vida de un proceso para emitir polizas.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/fe.webp",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JS,
+      TAGS.VB,
+      TAGS.SQL,
+      TAGS.API,
+      TAGS.Azure,
+    ],
+  },
+  {
+    title: "Suministros",
+    description:
+      "Plataforma para realizar gestion de insumos en oficinas y sucursales necesarios para manejar las operaciones del dia a dia.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/sum.webp",
+    tags: [TAGS.React, TAGS.CSS, TAGS.JS, TAGS.NET, TAGS.API, TAGS.CSHARP],
+  },
+  {
+    title: "FlujoCoreApi",
+    description:
+      "Plataforma de servicios RestAPI creados para las interactuar con las bases de datos de otras plataformas como flujo emision, cotizacion y reclamos, asi como aplicaciones de terceros (Salesforce,Sisnet).",
+    link: "#",
+    github: "#",
+    image: "/public/projects/flujocoreapi.webp",
+    tags: [TAGS.NET, TAGS.CSHARP, TAGS.API],
+  },
+  {
+    title: "Flujo Reclamos",
+    description:
+      "Plataforma que registra el ciclo de vida de un tramite para la gestion de los reclamos recibidos por una poliza.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/fr.webp",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JS,
+      TAGS.VB,
+      TAGS.SQL,
+      TAGS.API,
+      TAGS.Azure,
+    ],
+  },
+  {
+    title: "Flujo Admin",
+    description:
+      "Plataforma para la gestion de usuarios y permisos segun perfil asociado en las plataformas de flujo.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/flujoadmin.webp",
+    tags: [TAGS.React, TAGS.CSS, TAGS.TypeScript, TAGS.VB],
+  },
+  {
+    title: "Sistema de Gestion de Activos Fijos",
+    description:
+      "Colaboracion en creacion de modulos para gestion de activos fijos de pinturas sur.",
+    link: "#",
+    github: "#",
+    image: "/public/projects/laravel.webp",
+    tags: [TAGS.PHP, TAGS.LARAVEL],
+  },
+];
+---
+<div class="flex flex-col gap-y-16">
+    {
+        PROJECTS.map(({ title, description, tags, image, github, link }) => (
+          <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+              <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <img
+                  alt={`Captura de pantalla del proyecto ${title}`}
+                  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  
+                  src={image}
+                />
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <h3 class="text-3xl font-semibold text-teal-200/80">{title}</h3>
+              <div class="flex flex-wrap mt-2">
+                <ul class="flex flex-row mb-2 gap-x-2">
+                  {tags.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="mt-2 text-gray-400 dark:text-gray-100">{description}</div>
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  
+                </footer>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+      
+</div>

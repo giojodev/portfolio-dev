@@ -7,12 +7,17 @@ import SocialPill from "../components/SocialPill.astro";
 import MailIcon from '../components/icons/Mail.astro'
 import Experience from '../components/Experiencie.astro'
 import SectionContainer from "../components/SectionContainer.astro";
-import Briefcase from '../components/icons/Briefcase.astro'
+import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
+import ProfileCheck from '../components/icons/ProfileCheck.astro'
 ---
 
 <Layout title="Portfolio de GioJoDev - Desarrollador y Programador Web con 10 años de experiencia"
 description="Contrata a GioJoDev"
 >
+<main class="px-10">
   <SectionContainer   class="py-44 pb-20">
     <img
       class="rounded-full size-12 mb-4"
@@ -20,7 +25,7 @@ description="Contrata a GioJoDev"
       alt="giojo photo"
     />
     <h1
-      class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
+      class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10"
     >
       Hey, Soy GioJoDev <a
         href="https://www.linkedin.com/in/giojodev/"
@@ -33,7 +38,7 @@ description="Contrata a GioJoDev"
     </h1>
   </SectionContainer>
   <SectionContainer  class=" pb-20">
-    <h2 class="text-2xl">
+    <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
       <span>+10 años de experiencia.</span>
       <span class="text-green-500/90">Desarrollador Web, Frontend y Backend,</span
       >
@@ -41,18 +46,18 @@ description="Contrata a GioJoDev"
       <span class="opacity-70"
         >Desarrollador de aplicaciones y soluciones únicas</span
       >
-      <nav class="flex gap-x-2">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill>
-          <LinkedinIcon class="size-6" href="https://www.linkedin.com/in/giojodev/"/>
+          <LinkedinIcon class="size-4 md:size-6" href="https://www.linkedin.com/in/giojodev/"/>
           Linkedin
         </SocialPill>
   
         <SocialPill>
-          <GithubIcon class="size-6" href="https://github.com/giojodev" />
+          <GithubIcon class="size-4 md:size-6" href="https://github.com/giojodev" />
           Github
         </SocialPill>
         <SocialPill>
-          <MailIcon class="size-6" href="https://github.com/giojodev" />
+          <MailIcon class="size-4 md:size-6" href="https://github.com/giojodev" />
           giojodeveloper.gmail.com
         </SocialPill>
       </nav>
@@ -61,10 +66,27 @@ description="Contrata a GioJoDev"
   <SectionContainer id="experiencia">
     <div class="flex flex-row gap-x-3 mb-6 items-center">
       <Briefcase class="size-8"/>
-      <h1 class="text-2xl font-semibold">
+      <h1 class="text-2xl fontP-semibold">
         
         Experiencia Laboral</h1>
     </div>
     <Experience />
   </SectionContainer>
+  <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class:list="size-7" />
+        Proyectos
+      </h2>
+      <Projects/>
+  </SectionContainer>
+  <SectionContainer id="sobre-mi">
+    <h2
+    class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-gray-200/80 dark:text-white mt-10"
+    >
+    <ProfileCheck class="size-8" />
+    Sobre mí
+  </h2>
+  <AboutMe />
+  </SectionContainer>
+</main>
 </Layout>
