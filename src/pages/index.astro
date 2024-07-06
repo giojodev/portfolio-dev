@@ -10,6 +10,8 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from '../components/icons/Briefcase.astro';
 import Code from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
+import ProfileCheck from '../components/icons/ProfileCheck.astro'
 ---
 
 <Layout title="Portfolio de GioJoDev - Desarrollador y Programador Web con 10 años de experiencia"
@@ -76,6 +78,15 @@ description="Contrata a GioJoDev"
         Proyectos
       </h2>
       <Projects/>
+  </SectionContainer>
+  <SectionContainer id="sobre-mi">
+    <h2
+    class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-gray-200/80 dark:text-white mt-10"
+    >
+    <ProfileCheck class="size-8" />
+    Sobre mí
+  </h2>
+  <AboutMe />
   </SectionContainer>
 </main>
 </Layout>
